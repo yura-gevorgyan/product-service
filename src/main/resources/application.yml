@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: product-service
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/online_shop
+    username: user
+    password: root
+  liquibase:
+    change-log: classpath*:db/change-log.xml
+  servlet:
+    multipart:
+      enabled: true
+server:
+  port: 8081
+
+user:
+  service:
+    url: http://localhost:8083
+
+picture:
+  upload:
+    directory: C:/Users/Yura/IdeaProjects/project/product-service/images
+
+order:
+  service:
+    url: http://localhost:8082
+
